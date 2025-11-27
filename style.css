@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@1,75..100,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: gray;
+  color: #000f26;
+  line-height: 1.6;
+}
+
+/* ===== REUSABLE CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: #ffffff;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  /* keep header/navbar specific styles (logo, greeting area) */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  gap: 16px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.logo-text h1 {
+  font-size: 25px;
+}
+
+.masjid-image {
+  width: 80%;
+  max-width: 600px;   /* controls how big it can get */
+  height: auto;       /* keeps the image from stretching */
+  display: block;     /* removes small gaps */
+  margin: 0 auto;     /* centers the image */
+  border-radius: 12px; /* optional: smooth rounded corners */
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;  /* centers both together */
+  align-items: center;
+  gap: 40px;                /* space between image and Arabic */
+  margin-top: 30px;
+  flex-wrap: wrap;          /* mobile-friendly */
+}
+
+.imfc-img {
+  width: 50%;
+  max-width: 550px;
+  height: auto;
+  display: block;
+  margin: 24px auto;   /* ← medium space around image */
+}
+
+.salam {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff; /* change color if you want */
+}
+
+.prophet-img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #243e63;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0b7cff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(to bottom right, #e8f0ff, #ffffff);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #1b2a41;
+}
+
+.hero-text p {
+  max-width: 500px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.donate-image {
+  width: 100%;
+  max-width: 400px;  /* change to 150px or 120px for smaller */
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.donate-image-wrapper {
+  text-align: center;   /* centers image horizontally */
+  margin-top: 20px;
+}
+
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 60px 0;
+}
+
+.section-alt {
+  background: #000f26
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  color: #ffffff
+}
+
+.section-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ffffff
+}
+
+/* ===== CARDS ===== */
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;       /* controls card WIDTH */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+ 
+.card h3 {
+  margin-bottom: 12px;
+  color: #000f26
+}
+
+.card ul {
+  margin-left: 18px;
+  margin-top: 6px;
+}
+
+/* ==== MESSAGE FROM THE IMAM – CENTER BOTH ITEMS ==== */
+
+.imam-wrapper {
+  display: flex;
+  justify-content: center;   /* centers them under the title */
+  align-items: center;       /* aligns them evenly */
+  gap: 40px;                 /* space BETWEEN text & image */
+  margin-top: 20px;
+  flex-wrap: wrap;           /* mobile-friendly */
+}
+
+.imam-text {
+  max-width: 420px;
+  color: #000f26      /* keeps text card neat */
+}
+
+.imam-photo-box {
+  text-align: center;
+}
+
+.imam-photo {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.arabic-text {        /* Arabic reads right-to-left */
+  text-align: center;     /* Lines line up nicely on the right */
+  max-width: 600px;
+  color: #ffffff;
+  background: #1b2a41;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.arabic-text h2 {
+  color: inherit;            /* THIS makes the letters white */
+}
+
+.arabic-text p {
+  direction: ltr;          /* English reads left-to-right */
+  text-align: center;      /* centers the English text */
+  margin-top: 20px;        /* gives clean space under Arabic */
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+
+
+/* Special card */
+.jumuah-card,
+.donate-card {
+  margin-top: 20px;
+}
+
+/* ===== TABLE (PRAYER TIMES) ===== */
+.table-wrapper {
+  overflow-x: auto;
+  color:#ffffff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #6a6b6d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #660000; /* burgundy to match logo */
+}
+
+
+
+/* ===== FAQ ===== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: #660000;
+  padding: 12px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.faq-item h3 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.faq-item h3,
+.faq-item p {
+  color: #ffffff;
+}
+
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  background:#660000;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #ffffff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color:#ffffff;
+}
+
+.contact-info strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.contact-info p {
+  color: #ffffff;
+}
+
+.contact-info h3 {
+  color: #ffffff;
+}
+
+.contact-form {
+  color: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #6a6b6d;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer p + p {
+  margin-top: 4px;
+  color: #ffffff;
+}
+
+.footer p {
+ color:#ffffff;
+}
+
+.footer-content {
+  position: relative;
+}
+
+/* Social icons bottom right */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.footer-social a {
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  transition: transform 0.18s, background 0.18s, color 0.18s;
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: rgba(11,124,255,0.08);
+}
+
+/* Instagram */
+.footer-social .fa-instagram {
+  color: #E1306C;   /* Instagram pink */
+}
+
+/* Facebook */
+.footer-social .fa-facebook {
+  color: #1877F2;   /* Facebook blue */
+}
+
+/* YouTube */
+.footer-social .fa-youtube {
+  color: #FF0000;   /* YouTube red */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .imam-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imam-text {
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   RESPONSIVE LAYOUT
+   ========================= */
+
+/* ====== Large tablets / small laptops (≤ 1024px) ====== */
+@media (max-width: 1024px) {
+  /* Slightly tighter hero area */
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    gap: 24px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .donate-image {
+    max-width: 340px;
+  }
+}
+
+/* ====== Tablets & big phones (≤ 768px) ====== */
+@media (max-width: 768px) {
+  /* NAV: logo and links stack nicely */
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 8px;
+  }
+
+  /* HERO: image under the text, centered */
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text p {
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .donate-image-wrapper {
+    margin-top: 16px;
+  }
+
+  .donate-image {
+    max-width: 320px;
+  }
+
+  /* MAIN IMAGE SECTIONS (masjid / IMFC) */
+  .masjid-image,
+  .imfc-img {
+    width: 90%;
+    max-width: 480px;
+  }
+
+  /* CARDS: stack but still look nice */
+  .card-row {
+    gap: 16px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  /* IMAM SECTION: already flex, just center text */
+  .imam-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imam-text {
+    max-width: 100%;
+  }
+
+  .arabic-text {
+    text-align: right;
+    margin: 0 auto;
+  }
+
+  /* CONTACT GRID: form on top, info under */
+  .contact-grid {
+    flex-direction: column;
+  }
+}
+
+/* ====== Small phones (≤ 480px) ====== */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Logo smaller so it fits nicely */
+  .logo-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-text h1 {
+    font-size: 20px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+  }
+
+  /* Arabic text slightly smaller */
+  .arabic-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .arabic-text p {
+    font-size: 1.1rem;
+  }
+
+  /* Cards tighter on small screens */
+  .card {
+    padding: 16px;
+  }
+
+  .faq-item {
+    padding: 10px 12px;
+  }
+
+  /* Contact form spacing */
+  .contact-form {
+    padding: 12px;
+  }
+
+  /* Footer text smaller, icons centered */
+  .footer {
+    padding: 12px 0;
+  }
+
+  .footer-social {
+    gap: 12px;
+  }
+
+  .footer-social a {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+}

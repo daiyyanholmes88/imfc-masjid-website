@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "masjid project",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "masjid project",
+		"liveServer.settings.port": 5501
+	}
+}
